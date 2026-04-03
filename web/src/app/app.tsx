@@ -1,48 +1,21 @@
-import NxWelcome from './nx-welcome';
-
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Footer from './components/footer';
+import Navigation from './components/navigation';
+import HomePage from './pages/home';
+import ServicesPage from './pages/services';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="@org/web" />
-
-      {/* START: routes */}
-      {/* These routes and navigation have been generated for you */}
-      {/* Feel free to move and update them to fit your needs */}
-      <br />
-      <hr />
-      <br />
-      <div role="navigation">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/page-2">Page 2</Link>
-          </li>
-        </ul>
-      </div>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
-            </div>
-          }
-        />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          }
-        />
-      </Routes>
-      {/* END: routes */}
+    <div className="min-h-screen bg-slate-900 text-slate-100">
+      <Navigation />
+      <main className="mx-auto max-w-6xl px-6 pb-16 pt-6">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import ServicesPage from './pages/services';
 
 export function App() {
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100">
+    <div className="min-h-screen bg-brand-gray text-slate-100">
       <Navigation />
       <main className="mx-auto max-w-6xl px-6 pb-16 pt-6">
         <Routes>

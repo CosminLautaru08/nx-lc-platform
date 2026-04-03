@@ -6,12 +6,24 @@
 
 @layer base {
   :root {
+    /* Design System Color Tokens (single source of truth) */
     --brand-gray: #0f172a;
     --brand-red: #b91c1c;
+    --brand-cream: #f7f6f3;
+
+    /* Optional aliases for semantic usage */
+    --color-bg: var(--brand-gray);
+    --color-foreground: #f8fafc;
+    --color-primary: var(--brand-red);
+    --color-muted: #94a3b8;
   }
 
   body {
-    @apply bg-slate-900 text-slate-100 antialiased;
+    background-color: var(--color-bg);
+    color: var(--color-foreground);
+    font-family: 'Manrope', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-family: 'Manrope', 'Helvetica Neue', sans-serif;
   }
 }

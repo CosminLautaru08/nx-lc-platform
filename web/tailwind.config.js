@@ -13,9 +13,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-gray': '#0f172a',
-        'brand-red': '#b91c1c',
-        'brand-cream': '#f7f6f3',
+        'brand-gray': 'var(--brand-gray)',
+        'brand-red': 'var(--brand-red)',
+        'brand-cream': 'var(--brand-cream)',
+        'palette-bg': 'var(--color-bg)',
+        'palette-foreground': 'var(--color-foreground)',
+        'palette-primary': 'var(--color-primary)',
+        'palette-muted': 'var(--color-muted)',
       },
       fontFamily: {
         display: ['"Manrope"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
